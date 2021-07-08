@@ -1,0 +1,12 @@
+
+ void rotateArr(int arr[], int d, int n){
+        //12345
+      // 21345
+       //21543
+       //34512
+        reverse(arr    , arr + d);
+        reverse(arr + d, arr + n);
+        reverse(arr    , arr + n);
+    }
+};
+
