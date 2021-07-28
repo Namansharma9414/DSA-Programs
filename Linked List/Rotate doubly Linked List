@@ -1,0 +1,27 @@
+struct node*update(struct node*head,int p)
+{
+   
+  node *ptr=head;
+node *nptr=head;
+
+p=p-1;
+while(p--)
+{
+ptr=ptr->next;
+}
+
+head=ptr->next;
+head->prev=NULL;
+node *last=ptr;
+ptr=ptr->next;
+last->next=NULL;
+
+while(ptr->next!=NULL)
+ptr=ptr->next;
+
+ptr->next=nptr;
+nptr->prev=ptr;
+
+return head;
+   
+}
